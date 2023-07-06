@@ -24,7 +24,13 @@ function Search() {
 
     async function searchMoviesByName() {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=a83ecb449aa45a278bf5228ee3a95da6&query=${searchModified}&include_adult=false&language=en-US`
+        `${
+          import.meta.env.VITE_APP_BACK_SEARCH +
+          import.meta.env.VITE_APP_BACK_KEY +
+          "&query=" +
+          searchModified +
+          import.meta.env.VITE_APP_BACK_RESTRICTION
+        }`
       );
       setMoviesToRender(response.data.results);
     }
@@ -33,7 +39,15 @@ function Search() {
 
   async function getMoreMovies() {
     const response = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=a83ecb449aa45a278bf5228ee3a95da6&query=${searchModified}&include_adult=false&language=en-US&page=${numPages}`
+      `${
+        import.meta.env.VITE_APP_BACK_SEARCH +
+        import.meta.env.VITE_APP_BACK_KEY +
+        "&query=" +
+        searchModified +
+        import.meta.env.VITE_APP_BACK_RESTRICTION +
+        "&page=" +
+        numPages
+      }`
     );
     setNumPages((prev) => prev + 1);
     return setMoviesToRender((prevMovies) => [

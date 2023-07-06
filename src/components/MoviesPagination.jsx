@@ -2,9 +2,9 @@ import "../css/MoviesContent.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import HackModal from "./HackModal";
-import { animateScroll as scroll } from 'react-scroll';
+import { animateScroll as scroll } from "react-scroll";
 
-function MoviesPagination({ movies, numPage, setNumPage}) {
+function MoviesPagination({ movies, numPage, setNumPage }) {
   const [modalShow, setModalShow] = useState("");
 
   return (
@@ -22,8 +22,7 @@ function MoviesPagination({ movies, numPage, setNumPage}) {
                   >
                     <img
                       src={
-                        "https://image.tmdb.org/t/p/original/" +
-                        movie.poster_path
+                        import.meta.env.VITE_APP_BACK_IMG + movie.poster_path
                       }
                       alt=""
                       className="movie"
@@ -46,25 +45,105 @@ function MoviesPagination({ movies, numPage, setNumPage}) {
           </p>
         )}
       </div>
-      
-<nav aria-label="Page navigation example" className="d-flex justify-content-center mt-3 mb-3">
-  {numPage===1 
-  ? <ul className="pagination">
-  <li className="page-item disabled"><Link className="page-link">Previous</Link></li>
-  <li className="page-item disabled"><Link className="page-link">1</Link></li>
-  <li className="page-item"><Link to={`/paginacion/${numPage*1+1}`} className="page-link" onClick={()=>{ setNumPage( (prev)=>prev+1 ) & scroll.scrollToTop()}}>{numPage*1+1}</Link></li>
-  <li className="page-item"><Link to={`/paginacion/${numPage*1+2}`} className="page-link" onClick={()=>{ setNumPage( (prev)=>prev+2 ) & scroll.scrollToTop()}}>{numPage*1+2}</Link></li>
-  <li className="page-item"><Link to={`/paginacion/${numPage*1+1}`} className="page-link" onClick={()=>{ setNumPage( (prev)=>prev+1 ) & scroll.scrollToTop()}}>Next</Link></li>
-</ul>
-  :<ul className="pagination">
-    <li className="page-item"><Link to={`/paginacion/${numPage-1}`} className="page-link" onClick={()=>{ setNumPage( (prev)=>prev-1 ) & scroll.scrollToTop()}}>Previous</Link></li>
-    <li className="page-item"><Link to={`/paginacion/${numPage-1}`} className="page-link" onClick={()=>{ setNumPage( (prev)=>prev-1 ) & scroll.scrollToTop()}}>{numPage-1}</Link></li>
-    <li className="page-item disabled"><Link className="page-link">{numPage}</Link></li>
-    <li className="page-item"><Link to={`/paginacion/${numPage*1+1}`} className="page-link" onClick={()=>{ setNumPage( (prev)=>prev+1 ) & scroll.scrollToTop()}}>{numPage*1+1}</Link></li>
-    <li className="page-item"><Link to={`/paginacion/${numPage*1+1}`} className="page-link" onClick={()=>{ setNumPage( (prev)=>prev+1 ) & scroll.scrollToTop()}}>Next</Link></li>
-  </ul>}
-</nav>
-      
+
+      <nav
+        aria-label="Page navigation example"
+        className="d-flex justify-content-center mt-3 mb-3"
+      >
+        {numPage === 1 ? (
+          <ul className="pagination">
+            <li className="page-item disabled">
+              <Link className="page-link">Previous</Link>
+            </li>
+            <li className="page-item disabled">
+              <Link className="page-link">1</Link>
+            </li>
+            <li className="page-item">
+              <Link
+                to={`/paginacion/${numPage * 1 + 1}`}
+                className="page-link"
+                onClick={() => {
+                  setNumPage((prev) => prev + 1) & scroll.scrollToTop();
+                }}
+              >
+                {numPage * 1 + 1}
+              </Link>
+            </li>
+            <li className="page-item">
+              <Link
+                to={`/paginacion/${numPage * 1 + 2}`}
+                className="page-link"
+                onClick={() => {
+                  setNumPage((prev) => prev + 2) & scroll.scrollToTop();
+                }}
+              >
+                {numPage * 1 + 2}
+              </Link>
+            </li>
+            <li className="page-item">
+              <Link
+                to={`/paginacion/${numPage * 1 + 1}`}
+                className="page-link"
+                onClick={() => {
+                  setNumPage((prev) => prev + 1) & scroll.scrollToTop();
+                }}
+              >
+                Next
+              </Link>
+            </li>
+          </ul>
+        ) : (
+          <ul className="pagination">
+            <li className="page-item">
+              <Link
+                to={`/paginacion/${numPage - 1}`}
+                className="page-link"
+                onClick={() => {
+                  setNumPage((prev) => prev - 1) & scroll.scrollToTop();
+                }}
+              >
+                Previous
+              </Link>
+            </li>
+            <li className="page-item">
+              <Link
+                to={`/paginacion/${numPage - 1}`}
+                className="page-link"
+                onClick={() => {
+                  setNumPage((prev) => prev - 1) & scroll.scrollToTop();
+                }}
+              >
+                {numPage - 1}
+              </Link>
+            </li>
+            <li className="page-item disabled">
+              <Link className="page-link">{numPage}</Link>
+            </li>
+            <li className="page-item">
+              <Link
+                to={`/paginacion/${numPage * 1 + 1}`}
+                className="page-link"
+                onClick={() => {
+                  setNumPage((prev) => prev + 1) & scroll.scrollToTop();
+                }}
+              >
+                {numPage * 1 + 1}
+              </Link>
+            </li>
+            <li className="page-item">
+              <Link
+                to={`/paginacion/${numPage * 1 + 1}`}
+                className="page-link"
+                onClick={() => {
+                  setNumPage((prev) => prev + 1) & scroll.scrollToTop();
+                }}
+              >
+                Next
+              </Link>
+            </li>
+          </ul>
+        )}
+      </nav>
     </section>
   );
 }

@@ -13,13 +13,21 @@ function HackModal({ movie, setModalShow, modalShow }) {
       >
         <div className="modal-content">
           <div className="image-container">
-            <img src={"https://image.tmdb.org/t/p/original/"+movie.poster_path} alt="" className="image" />
+            <img
+              src={import.meta.env.VITE_APP_BACK_IMG + movie.poster_path}
+              alt=""
+              className="image"
+            />
           </div>
           <div className="content">
             <h3>{movie.original_title}</h3>
-            <small>{movie.release_date} - Rating {movie.vote_average}</small>
+            <small>
+              {movie.release_date} - Rating {movie.vote_average}
+            </small>
             <p>{movie.overview}</p>
-            <Link to={"/pelicula/"+movie.id} className="button-ver">Watch more...</Link>
+            <Link to={"/pelicula/" + movie.id} className="button-ver">
+              Watch more...
+            </Link>
           </div>
           <button onClick={() => setModalShow(null)} className="button">
             X

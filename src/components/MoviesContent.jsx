@@ -31,8 +31,7 @@ function MoviesContent({ movies, getMoreMovies }) {
                   >
                     <img
                       src={
-                        "https://image.tmdb.org/t/p/original/" +
-                        movie.poster_path
+                        import.meta.env.VITE_APP_BACK_IMG + movie.poster_path
                       }
                       alt={movie.original_title}
                       className="movie"
