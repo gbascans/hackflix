@@ -1,0 +1,64 @@
+.movie-container {
+    margin-top: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    gap: 20px;
+}
+
+.poster-container {
+    max-width: 30%;
+    max-height: 200px;
+    overflow: hidden;
+
+}
+
+.image {
+    height: 100%;
+}
+
+.movie-content-container {
+    max-width: 70%;
+}
+
+.movie-content-container h3 {
+    font-size: 1.5rem;
+    color: yellow;
+    margin-bottom: 0;
+}
+
+.movie-content-container small {
+    font-size: 0.5rem;
+    color: orange;
+}
+
+.movie-content-container p {
+    font-size: 0.8rem;
+    color: white;
+}
+
+
+
+.back {
+    color: yellow;
+    text-decoration: none;
+}
+
+.languajes-list {
+    padding: 0;
+    color: white;
+    list-style-type: none;
+}
+
+.movie-container h5 {
+    color: orange;
+    font-size: 1rem;
+}
+
+.error-mesage {
+    margin: 15%;
+    font-style: italic;
+    color: white;
+    text-align: center;
+    color: yellow;
+}

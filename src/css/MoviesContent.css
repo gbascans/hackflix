@@ -1,0 +1,45 @@
+.movie-frame{
+    width: 100px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.movie{
+    height: 100%;
+}
+
+.contenedor-general{
+    margin-top: 15px;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.alert{
+    color: rgb(255,0,0,0.5);
+}
+.scroll-alert{
+    color: rgb(255,0,0,0.5);
+    display: block;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.5rem;
+}
+
+.next-page{
+    font-style: italic;
+    font-size: 0.5rem;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+    display: block;
+}
+
+.font-size{
+    font-size: 0.5rem;
+}

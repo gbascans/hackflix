@@ -1,0 +1,18 @@
+.filter-container{
+    display: flex;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+
+.filter{
+    margin-right: 15px;
+}
+
+.star{
+    margin-left: 3px;
+    font-size: 0.8rem;
+    color: blue;
+}

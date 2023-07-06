@@ -1,0 +1,12 @@
+.navbar-contenedor{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: transparent;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
