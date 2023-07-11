@@ -15,7 +15,7 @@ function SearchMovie({ setSearch }) {
           >
             <input
               type="text"
-              placeholder="Buscar..."
+              placeholder="Batman: the dark knight return..."
               className="input-buscar"
             />
             <button type="submit" className="button-buscar">
@@ -24,7 +24,6 @@ function SearchMovie({ setSearch }) {
           </form>
         </div>
       </section>
-      <section className="movies-container"></section>
     </>
   );
 }

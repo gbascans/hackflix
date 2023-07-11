@@ -58,7 +58,7 @@ function Search() {
 
   return (
     <>
-      <SearchMovie setSearch={setSearch} />;
+      <SearchMovie setSearch={setSearch} />
       {!moviesToRender ? (
         <ReactLoading
           type="spokes"

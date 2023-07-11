@@ -1,8 +1,22 @@
 .movie-frame {
-    width: 300px;
+    width: 15vw;
     height: 350px;
     overflow: hidden;
 }
+
+@media (max-width: 767px) {
+    .movie-frame {
+        width: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .movie-frame {
+        width: 50%;
+    }
+}
+
+
 
 .movie {
     height: 100%;
@@ -20,6 +34,7 @@
 
 .alert {
     color: rgb(255, 0, 0, 0.5);
+    font-size: 2rem;
 }
 
 .scroll-alert {
@@ -27,7 +42,7 @@
     display: block;
     text-align: center;
     font-style: italic;
-    font-size: 0.5rem;
+    font-size: 2rem;
 }
 
 .next-page {
