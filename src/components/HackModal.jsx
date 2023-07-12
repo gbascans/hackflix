@@ -20,18 +20,21 @@ function HackModal({ movie, setModalShow, modalShow }) {
             />
           </div>
           <div className="content">
-            <h3>{movie.original_title}</h3>
-            <small>
+            <h3 className="fs-1">{movie.original_title}</h3>
+            <small className="fs-3">
               {movie.release_date} - Rating {movie.vote_average}
             </small>
-            <p>{movie.overview}</p>
+            <p className="fs-2">{movie.overview}</p>
+          </div>
+          <div className="buttons-container">
             <Link to={"/pelicula/" + movie.id} className="button-ver">
               Watch more...
             </Link>
+
+            <button onClick={() => setModalShow(null)} className="button">
+              X
+            </button>
           </div>
-          <button onClick={() => setModalShow(null)} className="button">
-            X
-          </button>
         </div>
       </div>
     </>

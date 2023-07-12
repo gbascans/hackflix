@@ -29,6 +29,7 @@ function Header({ movies }) {
         date={moviesLimit[currentMovie].release_date}
         content={moviesLimit[currentMovie].overview}
       />
+      <p className="scroll fs-3">Scroll to continue...</p>
     </section>
   );
 }

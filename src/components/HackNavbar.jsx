@@ -1,24 +1,31 @@
-import { Link } from "react-router-dom";
 import "../css/HackNavbar.css";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 function HackNavbar() {
   return (
     <section className="navbar-contenedor">
-      <div className="navbar">
-        <Link to="/" className="hackflix">
-          HACKFLIX
-        </Link>
-        <div>
-          <Link to="/paginacion/1" className="navbar-link">
-            Ver por Paginas
-          </Link>
-          <Link to="/buscar" className="navbar-link">
-            Buscar
-          </Link>
-          <Link to="/sobre-nosotros" className="navbar-link">
-            About The Project
-          </Link>
-        </div>
-      </div>
+      <Navbar expand="lg" className="navbar">
+        <Container>
+          <Navbar.Brand href="/" className="hackflix">
+            HACKFLIX
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav " />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="ms-auto">
+              <Nav.Link href="/paginacion/1" className="navbar-link">
+                By Pages
+              </Nav.Link>
+              <Nav.Link href="/buscar" className="navbar-link">
+                Search
+              </Nav.Link>
+              <Nav.Link href="/sobre-nosotros" className="navbar-link">
+                About The Project
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </section>
   );
 }

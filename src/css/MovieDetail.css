@@ -4,14 +4,18 @@
     margin-right: 15%;
     display: flex;
     gap: 5%;
+    margin-bottom: 10px;
 }
 
-.poster-container {
-    max-width: 30%;
-    max-height: 70vh;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
+@media (min-width: 768px) {
+    .poster-container {
+        max-width: 30%;
+        max-height: 70vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+
+    }
 
 }
 
@@ -21,6 +25,27 @@
 
 .movie-content-container {
     max-width: 65%;
+}
+
+@media (max-width: 767px) {
+    .movie-container {
+        flex-direction: column;
+    }
+
+    .poster-container {
+        order: 1;
+        width: 100%;
+        height: 50vh;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .movie-content-container {
+        order: 2;
+        max-width: 100%;
+    }
 }
 
 .movie-content-container h3 {
