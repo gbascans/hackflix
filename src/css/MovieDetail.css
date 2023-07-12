@@ -1,15 +1,17 @@
 .movie-container {
-    margin-top: 50px;
+    margin-top: 10vh;
     margin-left: 15%;
     margin-right: 15%;
     display: flex;
-    gap: 20px;
+    gap: 5%;
 }
 
 .poster-container {
     max-width: 30%;
-    max-height: 200px;
+    max-height: 70vh;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -18,22 +20,22 @@
 }
 
 .movie-content-container {
-    max-width: 70%;
+    max-width: 65%;
 }
 
 .movie-content-container h3 {
-    font-size: 1.5rem;
+    font-size: 3rem;
     color: yellow;
     margin-bottom: 0;
 }
 
 .movie-content-container small {
-    font-size: 0.5rem;
+    font-size: 1.5rem;
     color: orange;
 }
 
 .movie-content-container p {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
     color: white;
 }
 
@@ -41,6 +43,7 @@
 
 .back {
     color: yellow;
+    font-size: 1.5rem;
     text-decoration: none;
 }
 
@@ -48,11 +51,12 @@
     padding: 0;
     color: white;
     list-style-type: none;
+    font-size: 1.5rem;
 }
 
 .movie-container h5 {
     color: orange;
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 
 .error-mesage {

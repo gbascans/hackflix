@@ -60,12 +60,14 @@ function Search() {
     <>
       <SearchMovie setSearch={setSearch} />
       {!moviesToRender ? (
-        <ReactLoading
-          type="spokes"
-          color="#ffffff"
-          height={"20%"}
-          width={"20%"}
-        />
+        <div className="100vw d-flex justify-content-center">
+          <ReactLoading
+            type="spokes"
+            color="#ffffff"
+            height={"20%"}
+            width={"20%"}
+          />
+        </div>
       ) : (
         <MoviesContent movies={moviesToRender} getMoreMovies={getMoreMovies} />
       )}

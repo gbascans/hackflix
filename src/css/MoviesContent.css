@@ -2,6 +2,8 @@
     width: 15vw;
     height: 350px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 767px) {

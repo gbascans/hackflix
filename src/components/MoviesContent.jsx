@@ -49,7 +49,8 @@ function MoviesContent({ movies, getMoreMovies }) {
             </>
           ) : (
             <p className="alert">
-              "No se encuentran películas segun los parametros seleccionados"
+              "No se encuentran resultados. Modifique la busqueda e intente
+              nuevamente"
             </p>
           )}
         </div>
