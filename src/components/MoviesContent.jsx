@@ -49,8 +49,7 @@ function MoviesContent({ movies, getMoreMovies }) {
             </>
           ) : (
             <p className="alert">
-              "No se encuentran resultados. Modifique la busqueda e intente
-              nuevamente"
+              "No results found. Try again with another title"
             </p>
           )}
         </div>

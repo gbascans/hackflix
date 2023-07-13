@@ -5,12 +5,12 @@ import Navbar from "react-bootstrap/Navbar";
 function HackNavbar() {
   return (
     <section className="navbar-contenedor">
-      <Navbar expand="lg" className="navbar">
+      <Navbar expand="lg" className="navbar" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="/" className="hackflix">
             HACKFLIX
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav " />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link href="/paginacion/1" className="navbar-link">

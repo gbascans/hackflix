@@ -40,7 +40,6 @@
     top: 100px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: normal;
     word-wrap: break-word;
 
 }
@@ -57,13 +56,21 @@
     font-size: 5rem;
 }
 
+@media (max-width:768px) {
+    .header-content h1 {
+        color: white;
+        -webkit-text-stroke: 1px black;
+        font-size: 2rem;
+    }
+}
+
 .header-content small {
     color: rgba(247, 243, 0, 1);
     font-size: 2rem;
 }
 
 .header-content p {
-    color: rgb(255, 255, 255, 0.5);
+    color: rgb(255, 255, 255, 0.8);
     font-size: 2rem;
 }
 

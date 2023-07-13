@@ -37,6 +37,8 @@
 .alert {
     color: rgb(255, 0, 0, 0.5);
     font-size: 2rem;
+    display: block;
+    text-align: center;
 }
 
 .scroll-alert {
